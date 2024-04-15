@@ -44,18 +44,19 @@ const Contact = () => {
             onSubmit = {( values, { setSubmitting } ) => {
                 const form = document.getElementById("contactForm");
                 const status = document.getElementById("contactFormStatus");
-                const data = new FormData();
 
-                data.append('name', values.name);
-                data.append('email', values.email);
-                data.append('message', values.message);
-
+                const data = JSON.stringify({
+                    name: values.name,
+                    email: values.email,
+                    message: values.message
+                  });
                 fetch(form.action, {
                     method: 'POST',
                     body: data,
                     headers: {
-                        'Accept': 'application/json'
-                    }
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                      },
                 }).then(response => {
                     if (response.ok) {
                         status.innerHTML = "Gracias por tu mensaje!";
@@ -86,7 +87,7 @@ const Contact = () => {
                 isSubmitting,
                 /* and other goodies */
             }) => (
-            <form onSubmit={handleSubmit} id="contactForm" action={appData.settings.formsparkURL} className="row align-items-center">
+            <form onSubmit={handleSubmit} data-botpoison-public-key="pk_0b02a950-b398-4982-846b-154af1b7aa5c" id="contactForm" action={appData.settings.formsparkURL} className="row align-items-center">
                 <div className="col-lg-6 mil-up">
                     <input 
                       type="text" 
