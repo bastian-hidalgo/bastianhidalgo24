@@ -41,22 +41,12 @@
     },
     "social": [
         {
-            "link": "https://behance.net",
-            "icon": "fab fa-behance",
-            "title": "Behance"
+            "link": "https://www.linkedin.com/in/bastian-hidalgo-a7ab935b/",
+            "icon": "fab fa-linkedin",
+            "title": "Linkedin"
         },
         {
-            "link": "https://dribbble.com",
-            "icon": "fab fa-dribbble",
-            "title": "Dribbble"
-        },
-        {
-            "link": "https://twitter.com",
-            "icon": "fab fa-twitter",
-            "title": "Twitter"
-        },
-        {
-            "link": "https://github.com",
+            "link": "https://github.com/bastian-hidalgo",
             "icon": "fab fa-github",
             "title": "Github"
         }
