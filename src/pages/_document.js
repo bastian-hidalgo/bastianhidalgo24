@@ -37,7 +37,7 @@ class MyDocument extends Document {
             }}
           />
           <script defer src="https://tusclicks.com/embed/whatsapp-widget.min.js"></script>
-
+          <script src="https://unpkg.com/@botpoison/browser" async></script>
           {/* public assets end */}
         </Head>
         <body>

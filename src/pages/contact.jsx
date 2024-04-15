@@ -44,37 +44,43 @@ const Contact = () => {
             onSubmit = {( values, { setSubmitting } ) => {
                 const form = document.getElementById("contactForm");
                 const status = document.getElementById("contactFormStatus");
-
-                const data = JSON.stringify({
-                    name: values.name,
-                    email: values.email,
-                    message: values.message
+                const botpoison = new Botpoison({
+                    publicKey: values.botpoisonPublicKey,
                   });
-                fetch(form.action, {
-                    method: 'POST',
-                    body: data,
-                    headers: {
-                        "Content-Type": "application/json",
-                        Accept: "application/json",
-                      },
-                }).then(response => {
-                    if (response.ok) {
-                        status.innerHTML = "Gracias por tu mensaje!";
-                        form.reset()
-                    } else {
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, 'errors')) {
-                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                            } else {
-                                status.innerHTML = "Oops! Hubo un problema al enviar el formulario."
-                            }
-                        })
-                    }
-                }).catch(error => {
-                    status.innerHTML = "Oops! Hubo un problema al enviar el formulario."
-                });
+
+                botpoison.challenge().then(({ solution }) => {
+                    const data = JSON.stringify({
+                        name: values.name,
+                        email: values.email,
+                        message: values.message,
+                        _botpoison: solution,
+                    });
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: data,
+                        headers: {
+                            "Content-Type": "application/json",
+                            Accept: "application/json",
+                        },
+                    }).then(response => {
+                        if (response.ok) {
+                            status.innerHTML = "Gracias por tu mensaje!";
+                            form.reset()
+                        } else {
+                            response.json().then(data => {
+                                if (Object.hasOwn(data, 'errors')) {
+                                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                                } else {
+                                    status.innerHTML = "Oops! Hubo un problema al enviar el formulario."
+                                }
+                            })
+                        }
+                    }).catch(error => {
+                        status.innerHTML = "Oops! Hubo un problema al enviar el formulario."
+                    });
 
                 setSubmitting(false);
+            });
             }}
             >
             {({
