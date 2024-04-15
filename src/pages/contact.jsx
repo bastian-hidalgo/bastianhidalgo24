@@ -33,7 +33,7 @@ const Contact = () => {
             validate = { values => {
                 const errors = {};
                 if (!values.email) {
-                    errors.email = 'Required';
+                    errors.email = 'Requerido';
                 } else if (
                     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
                 ) {
@@ -58,19 +58,19 @@ const Contact = () => {
                     }
                 }).then(response => {
                     if (response.ok) {
-                        status.innerHTML = "Thanks for your submission!";
+                        status.innerHTML = "Gracias por tu mensaje!";
                         form.reset()
                     } else {
                         response.json().then(data => {
                             if (Object.hasOwn(data, 'errors')) {
                                 status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
                             } else {
-                                status.innerHTML = "Oops! There was a problem submitting your form"
+                                status.innerHTML = "Oops! Hubo un problema al enviar el formulario."
                             }
                         })
                     }
                 }).catch(error => {
-                    status.innerHTML = "Oops! There was a problem submitting your form"
+                    status.innerHTML = "Oops! Hubo un problema al enviar el formulario."
                 });
 
                 setSubmitting(false);
@@ -86,7 +86,7 @@ const Contact = () => {
                 isSubmitting,
                 /* and other goodies */
             }) => (
-            <form onSubmit={handleSubmit} id="contactForm" action={appData.settings.formspreeURL} className="row align-items-center">
+            <form onSubmit={handleSubmit} id="contactForm" action={appData.settings.formsparkURL} className="row align-items-center">
                 <div className="col-lg-6 mil-up">
                     <input 
                       type="text" 
