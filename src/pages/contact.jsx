@@ -45,7 +45,7 @@ const Contact = () => {
                 const form = document.getElementById("contactForm");
                 const status = document.getElementById("contactFormStatus");
                 const botpoison = new Botpoison({
-                    publicKey: values.botpoisonPublicKey,
+                    publicKey: "pk_0b02a950-b398-4982-846b-154af1b7aa5c",
                   });
 
                 botpoison.challenge().then(({ solution }) => {
@@ -93,7 +93,7 @@ const Contact = () => {
                 isSubmitting,
                 /* and other goodies */
             }) => (
-            <form onSubmit={handleSubmit} data-botpoison-public-key="pk_0b02a950-b398-4982-846b-154af1b7aa5c" id="contactForm" action={appData.settings.formsparkURL} className="row align-items-center">
+            <form onSubmit={handleSubmit} id="contactForm" action={appData.settings.formsparkURL} className="row align-items-center">
                 <div className="col-lg-6 mil-up">
                     <input 
                       type="text" 
