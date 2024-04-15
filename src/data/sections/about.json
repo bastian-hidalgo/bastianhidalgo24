@@ -1,0 +1,12 @@
+{
+    "avatar": {
+        "image": "/img/person/avatar.jpg",
+        "alt": "avatar"
+    },
+    "title": "¡Hola! Mi nombre es Bastian, <br/>soy desarrollador Frontend radicado en Santiago de Chile",
+    "description": "Desarrollador Frontend con una década de experiencia en Desarrollo Web, especializado en liderar y gestionar proyectos con una sólida visión técnica. Competente en JavaScript, me destaco en cerrar la brecha entre Diseño, Backend y Frontend, asegurando que los requisitos del cliente se integren perfectamente en nuestras soluciones. Mi función como líder técnico implica investigación e innovación en profundidad, guiando a los equipos para ofrecer experiencias web excepcionales. Mi comprensión integral del panorama digital me permite adaptarme y evolucionar con las tendencias tecnológicas en constante cambio, contribuyendo a los resultados exitosos de los proyectos.",
+    "signature": {
+        "image": "/img/person/sign.png",
+        "alt": "signature"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "title": "Services",
+    "items": [
+        {
+            "title": "UI/UX Design",
+            "icon": "/img/icons/1.svg",
+            "text": "Amplifique su huella digital con interfaces fascinantes que cautivan y experiencias impecables que asombran.",
+            "link": "/services/service-1"
+        },
+        {
+            "title": "Communication Strategy",
+            "icon": "/img/icons/2.svg",
+            "text": "Elabore una estrategia de comunicación sólida para transmitir su marca, atraer a su audiencia e impulsar resultados.",
+            "link": "/services/service-2"
+        },
+        {
+            "title": "Web Development",
+            "icon": "/img/icons/4.png",
+            "text": "Elabore una estrategia web de vanguardia para revolucionar su presencia en línea, cautivar al público e impulsar su éxito digital.",
+            "link": "/services/service-3"
+        }
+    ]
+}

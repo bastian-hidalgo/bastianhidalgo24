@@ -1,0 +1,45 @@
+{
+    "title": "Hard Skills",
+    "items": [
+        {
+            "label": "React JS",
+            "value": "89"
+        },
+        {
+            "label": "Next JS",
+            "value": "75"
+        },
+        {
+            "label": "Redux",
+            "value": "80"
+        },
+        {
+            "label": "Wordpress",
+            "value": "84"
+        },
+        {
+            "label": "Tailwind CSS",
+            "value": "80"
+        },
+        {
+            "label": "Bootstrap",
+            "value": "90"
+        },
+        {
+            "label": "Sass",
+            "value": "100"
+        },
+        {
+            "label": "AWS: S3 / CF / R53 / Lambdas / EC2",
+            "value": "62"
+        },
+        {
+            "label": "Photoshop / Illustrator",
+            "value": "90"
+        },
+        {
+            "label": "Affinity Photo / Designer",
+            "value": "82"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "title": "Idiomas",
+    "items": [
+        {
+            "label": "Ingles",
+            "value": "90"
+        },
+        {
+            "label": "Español",
+            "value": "100"
+        }
+    ]
+}
