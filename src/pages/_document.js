@@ -18,6 +18,17 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-J26ZP3Z61E"></script>
+          <script dangerouslySetInnerHTML={{
+             __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-J26ZP3Z61E');
+              `
+            }}
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `
