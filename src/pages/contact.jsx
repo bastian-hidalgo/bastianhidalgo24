@@ -16,7 +16,7 @@ const Contact = () => {
             <ul className="mil-puplication-details mil-up mil-mb-90">
                 <li>
                     <span className="mil-upper mil-accent">Escríbeme: </span>&nbsp;&nbsp;
-                    <span className="mil-upper mil-dark">bastian_hidalgo@outlook.com</span>
+                    <span className="mil-upper mil-dark">bastian@bastianhidalgo.cl</span>
                 </li>
             </ul>
         </div>
